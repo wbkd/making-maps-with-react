@@ -1,0 +1,68 @@
+{
+  "name": "react-starter",
+  "config": {
+    "appname": "my-app-name"
+  },
+  "version": "1.1.1",
+  "description": "lightweight react starterkit with webpack, redux, react-router",
+  "scripts": {
+    "build": "rm -rf ./build && NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
+    "start": "NODE_ENV=development webpack-dev-server --config  webpack/webpack.config.dev.js --watch --colors --no-info",
+    "upload": "rsync -avz -e \"ssh\" ./build/ moklick_webkid@ssh.alwaysdata.com:/home/moklick/apps.webkid/$npm_package_config_appname && npm run info",
+    "deploy": "npm run build && npm run upload",
+    "info": "echo Deploy succeeded on moklick_webkid@ssh.alwaysdata.com:/home/moklick/apps.webkid/$npm_package_config_appname"
+  },
+  "repository": {
+    "url": "git@github.com:wbkd/react-starter.git",
+    "type": "git"
+  },
+  "author": "webkid.io",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react-app": "^2.0.1",
+    "babel-preset-react-optimize": "^1.0.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-react-app": "^0.6.2",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "extract-text-webpack-plugin": "2.1.0",
+    "html-webpack-plugin": "^2.26.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack": "2.3.3",
+    "webpack-dev-server": "2.4.2",
+    "zip-webpack-plugin": "^1.1.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.6.1",
+    "axios": "^0.16.1",
+    "babel-polyfill": "^6.23.0",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
+    "normalize.css": "^6.0.0",
+    "object-assign": "^4.1.0",
+    "postcss-loader": "^1.2.2",
+    "promise": "^7.1.1",
+    "react": "^15.4.2",
+    "react-dev-utils": "0.5.2",
+    "react-dom": "^15.4.2",
+    "react-icons": "^2.2.3",
+    "react-redux": "^5.0.2",
+    "react-router": "4.0.0",
+    "react-router-dom": "4.0.0",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "style-loader": "^0.16.1",
+    "whatwg-fetch": "^2.0.1"
+  }
+}
