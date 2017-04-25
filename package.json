@@ -1,19 +1,13 @@
 {
-  "name": "react-starter",
-  "config": {
-    "appname": "my-app-name"
-  },
-  "version": "1.1.1",
+  "name": "making-maps-with-react",
+  "version": "1.0.0",
   "description": "lightweight react starterkit with webpack, redux, react-router",
   "scripts": {
     "build": "rm -rf ./build && NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
-    "start": "NODE_ENV=development webpack-dev-server --config  webpack/webpack.config.dev.js --watch --colors --no-info",
-    "upload": "rsync -avz -e \"ssh\" ./build/ moklick_webkid@ssh.alwaysdata.com:/home/moklick/apps.webkid/$npm_package_config_appname && npm run info",
-    "deploy": "npm run build && npm run upload",
-    "info": "echo Deploy succeeded on moklick_webkid@ssh.alwaysdata.com:/home/moklick/apps.webkid/$npm_package_config_appname"
+    "start": "NODE_ENV=development webpack-dev-server --config  webpack/webpack.config.dev.js --watch --colors --no-info"
   },
   "repository": {
-    "url": "git@github.com:wbkd/react-starter.git",
+    "url": "git@github.com:wbkd/making-maps-with-react.git",
     "type": "git"
   },
   "author": "webkid.io",
