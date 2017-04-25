@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source\+Sans\+Pro:400,600,700,900')
+@import '../../node_modules/leaflet/dist/leaflet.css';
+
 @import 'media'
 @import 'globals'
 
@@ -15,3 +17,22 @@ body
   color: $black
   font-size: 10px
   line-height: 1.4
+
+body,
+html
+  padding: 0
+  margin: 0
+  height:100%
+
+.app
+  height: 100%
+  display: flex
+  flex-direction: column
+
+  .map
+    flex: 1 0
+    display: flex
+    position: relative
+
+#root
+  height:100%

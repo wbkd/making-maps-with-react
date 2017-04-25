@@ -22,7 +22,7 @@ Builds the application and starts a webserver with hot loading.
 Runs on [localhost:3000](http://localhost:3000/)
 
 ```sh
-$ npm run start
+$ npm start
 ```
 
 ## Build

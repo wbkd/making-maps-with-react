@@ -1,29 +1,21 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import GlobeIcon from 'react-icons/lib/go/globe';
 
-import FaRocket from 'react-icons/lib/fa/rocket';
-import './header.styl';
+import './Header.styl';
 
-class Header extends PureComponent {
+class Home extends PureComponent {
 
   render() {
     return (
       <header className="header">
-        <div className="header__claim">
-          <span>webkid react </span>
-          <FaRocket />
-        </div>
-        <nav className="menu">
-          <div className="menu__item">
-            <Link to="">Link1</Link>
-          </div>
-          <div className="menu__item">
-            <Link to="">Link2</Link>
-          </div>
-        </nav>
+        <Link to="/" className="header__claim">
+          <GlobeIcon />
+          <span className="header__title">Making Maps With Reacts</span>
+        </Link>
       </header>
     );
   }
 }
 
-export default Header;
+export default Home;
