@@ -38,6 +38,7 @@
     "zip-webpack-plugin": "^1.1.0"
   },
   "dependencies": {
+    "@turf/random": "^4.1.0",
     "autoprefixer": "^6.6.1",
     "babel-polyfill": "^6.23.0",
     "css-loader": "^0.28.0",
