@@ -20,8 +20,13 @@ export const markers = [
 
 export const mapConfig = {
   center: [52.499219, 13.425416],
-  zoom: 9
+  zoom: 8
 };
 
-const points = turfRandom('points', 5000, { bbox: [13.0535, 52.3303, 13.7262, 52.6675] });
+const points = turfRandom('points', 300, { bbox: [13.0535, 52.3303, 13.7262, 52.6675] });
 export const locations = Immutable.fromJS(points.features.map(feat => feat.geometry.coordinates));
+
+
+export const hexaData = points.features.map(feat => (
+  { position: [feat.geometry.coordinates[1], feat.geometry.coordinates[0]] })
+);

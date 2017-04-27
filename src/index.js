@@ -9,6 +9,7 @@ import Home from './components/Home';
 import ReactLeafletMap from './components/ReactLeaflet';
 import PigeonMaps from './components/PigeonMaps';
 import ReactMapGL from './components/ReactMapGL';
+import ReactMapGLDeckGL from './components/ReactMapGLDeckGL';
 
 import './styles/main.styl';
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Route path="/react-leaflet" component={ReactLeafletMap} />
       <Route path="/pigeon-maps" component={PigeonMaps} />
       <Route path="/react-map-gl" component={ReactMapGL} />
+      <Route path="/react-mapgl-with-deckgl" component={ReactMapGLDeckGL} />
     </div>
   </BrowserRouter>,
   document.getElementById('root')
