@@ -5,7 +5,7 @@ import { slugify } from '../../helper/utils';
 
 import './Home.styl';
 
-const libraries = ['React Leaflet', 'Pigeon Maps'];
+const libraries = ['React Leaflet', 'Pigeon Maps', 'React Map GL'];
 
 class Home extends PureComponent {
 

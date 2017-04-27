@@ -54,6 +54,11 @@ module.exports = {
       { from: Path.resolve(__dirname, '../src/public/data'), to: 'data' }
     ])
   ],
+  resolve: {
+    alias: {
+      'mapbox-gl$': Path.resolve('./node_modules/mapbox-gl/dist/mapbox-gl.js')
+    }
+  },
   module: {
     rules: [
       {

@@ -14,3 +14,5 @@ yarn.lock
 .yarnclean
 
 .vscode
+
+config_local.json

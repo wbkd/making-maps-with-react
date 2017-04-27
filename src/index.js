@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import ReactLeafletMap from './components/ReactLeaflet';
 import PigeonMaps from './components/PigeonMaps';
+import ReactMapGL from './components/ReactMapGL';
 
 import './styles/main.styl';
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route exact path="/" component={Home} />
       <Route path="/react-leaflet" component={ReactLeafletMap} />
       <Route path="/pigeon-maps" component={PigeonMaps} />
+      <Route path="/react-map-gl" component={ReactMapGL} />
     </div>
   </BrowserRouter>,
   document.getElementById('root')
