@@ -1,9 +1,6 @@
 import React, { PureComponent } from 'react';
-
 import MapGL, { ScatterplotOverlay } from 'react-map-gl';
-
 import CONFIG from '../../../config_local.json';
-
 import { mapConfig, locations } from '../../helper/utils';
 
 class ReactMapGL extends PureComponent {
@@ -21,8 +18,7 @@ class ReactMapGL extends PureComponent {
         startDragLngLat: mapConfig.center,
         pitch: 50,
         bearing: 0
-      },
-      geojson: null
+      }
     };
 
     this.onChangeViewport = this.onChangeViewport.bind(this);
