@@ -1,3 +1,5 @@
+/*eslint-disable */
+
 import React, { PureComponent } from 'react';
 import Map from 'pigeon-maps';
 import Marker from 'pigeon-marker';

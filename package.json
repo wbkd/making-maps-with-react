@@ -42,6 +42,7 @@
     "autoprefixer": "^6.6.1",
     "babel-polyfill": "^6.23.0",
     "css-loader": "^0.28.0",
+    "d3-request": "^1.0.5",
     "deck.gl": "^4.0.5",
     "file-loader": "^0.11.1",
     "immutable": "^3.8.1",
