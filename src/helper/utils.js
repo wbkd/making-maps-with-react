@@ -23,7 +23,7 @@ export const mapConfig = {
   zoom: 8
 };
 
-const points = turfRandom('points', 10000, { bbox: [13.0535, 52.3303, 13.7262, 52.6675] });
+const points = turfRandom('points', 50000, { bbox: [13.0535, 52.3303, 13.7262, 52.6675] });
 export const locations = Immutable.fromJS(points.features.map(feat => feat.geometry.coordinates));
 
 

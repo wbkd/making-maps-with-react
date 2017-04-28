@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 import MapGL from 'react-map-gl';
-import DeckGL, { LineLayer, ScatterplotLayer, GeoJsonLayer } from 'deck.gl';
+import DeckGL, { GeoJsonLayer, ScatterplotLayer, ScreenGridLayer } from 'deck.gl';
 import { json as requestJson } from 'd3-request';
 
 import CONFIG from '../../../config_local.json';
@@ -52,13 +52,13 @@ class ReactMapGLDeckGL extends PureComponent {
   render() {
     const { viewport, geojson } = this.state;
 
-    const scatterplotLayer = new ScatterplotLayer({
-      id: 'scatter-plott-layer',
-      data: scatterPlotData,
-      radiusScale: 50,
-      outline: true,
-      getPosition: d => d.position
-    });
+    // const scatterplotLayer = new ScatterplotLayer({
+    //   id: 'scatter-plott-layer',
+    //   data: scatterPlotData,
+    //   radiusScale: 50,
+    //   outline: true,
+    //   getPosition: d => d.position
+    // });
 
     const geosjsonLayer = new GeoJsonLayer({
       id: 'geojson-layer',
@@ -68,6 +68,14 @@ class ReactMapGLDeckGL extends PureComponent {
       lineWidthMinPixels: 1,
       lineWidthScale: 1,
       getLineColor: d => [175, 175, 175]
+    });
+
+    const screenGridLayer = new ScreenGridLayer({
+      id: 'screen-grid-layer',
+      data: scatterPlotData,
+      cellSizePixels: 10,
+      minColor: [43, 140, 190, 0],
+      maxColor: [43, 140, 190, 255]
     });
 
     return (
@@ -81,7 +89,7 @@ class ReactMapGLDeckGL extends PureComponent {
         >
           <DeckGL
             {...viewport}
-            layers={[geosjsonLayer, scatterplotLayer]}
+            layers={[geosjsonLayer, screenGridLayer]}
             onWebGLInitialized={this.initialize}
           />
         </MapGL>

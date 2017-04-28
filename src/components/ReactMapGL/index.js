@@ -6,7 +6,6 @@ import CONFIG from '../../../config_local.json';
 
 import { mapConfig, locations } from '../../helper/utils';
 
-
 class ReactMapGL extends PureComponent {
   constructor(props) {
     super(props);
