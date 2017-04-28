@@ -35,7 +35,7 @@ class ReactMapGLDeckGL extends PureComponent {
     });
 
 
-    this.onChangeViewport = this.onChangeViewport.bind(this)
+    this.onChangeViewport = this.onChangeViewport.bind(this);
   }
 
   onChangeViewport(viewport) {
@@ -73,11 +73,11 @@ class ReactMapGLDeckGL extends PureComponent {
     return (
       <div className="reactmapgldeckgl">
         <MapGL
+          {...viewport}
+          mapboxApiAccessToken={CONFIG.MAPBOX_ACCESS_TOKEN}
           mapStyle="mapbox://styles/mapbox/dark-v9"
           perspectiveEnabled
           onChangeViewport={this.onChangeViewport}
-          {...viewport}
-          mapboxApiAccessToken={CONFIG.MAPBOX_ACCESS_TOKEN}
         >
           <DeckGL
             {...viewport}

@@ -6,24 +6,44 @@ import CONFIG from '../../../config_local.json';
 
 import { mapConfig, locations } from '../../helper/utils';
 
-import './ReactMapGL.styl';
 
 class ReactMapGL extends PureComponent {
-  render() {
-    const viewport = {
-      width: window.innerWidth,
-      height: window.innerHeight,
-      latitude: mapConfig.center[0],
-      longitude: mapConfig.center[1],
-      zoom: mapConfig.zoom,
-      isDragging: false,
-      startDragLngLat: mapConfig.center
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      viewport: {
+        width: window.innerWidth,
+        height: 600,
+        latitude: mapConfig.center[0],
+        longitude: mapConfig.center[1],
+        zoom: mapConfig.zoom,
+        isDragging: false,
+        startDragLngLat: mapConfig.center,
+        pitch: 50,
+        bearing: 0
+      },
+      geojson: null
     };
+
+    this.onChangeViewport = this.onChangeViewport.bind(this);
+  }
+
+  onChangeViewport(viewport) {
+    this.setState({
+      viewport: { ...this.state.viewport, ...viewport }
+    });
+  }
+
+  render() {
+    const { viewport } = this.state;
     return (
       <div className="reactmapgl">
         <MapGL
           {...viewport}
           mapboxApiAccessToken={CONFIG.MAPBOX_ACCESS_TOKEN}
+          perspectiveEnabled
+          onChangeViewport={this.onChangeViewport}
         >
           <ScatterplotOverlay
             {...viewport}
