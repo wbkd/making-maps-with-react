@@ -45,6 +45,7 @@
     "d3-request": "^1.0.5",
     "deck.gl": "^4.0.5",
     "file-loader": "^0.11.1",
+    "google-map-react": "^0.24.0",
     "immutable": "^3.8.1",
     "leaflet": "^1.0.3",
     "luma.gl": "^3.0.2",
