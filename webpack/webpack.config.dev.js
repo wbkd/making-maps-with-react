@@ -39,7 +39,8 @@ module.exports = {
     }),
     new Webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('development')
+        NODE_ENV: JSON.stringify('development'),
+        BASENAME: JSON.stringify('/')
       }
     }),
     new Webpack.HotModuleReplacementPlugin(),
@@ -47,7 +48,8 @@ module.exports = {
     new WatchMissingNodeModulesPlugin(Path.resolve(__dirname, 'node_modules')),
     new HtmlWebpackPlugin({
       inject: true,
-      template: Path.resolve(__dirname, '../src/index.html')
+      template: Path.resolve(__dirname, '../src/index.html'),
+      basename: process.env.BASENAME
     }),
     // copy data folder to make it available in redux loadData action
     new CopyWebpackPlugin([

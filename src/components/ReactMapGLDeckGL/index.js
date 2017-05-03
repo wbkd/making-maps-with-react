@@ -28,7 +28,7 @@ class ReactMapGLDeckGL extends PureComponent {
       geojson: null
     };
 
-    requestJson('data/berlin_bezirke.json', (error, response) => {
+    requestJson(`${process.env.BASENAME}data/berlin_bezirke.json`, (error, response) => {
       if (!error) {
         this.setState({ geojson: response });
       }

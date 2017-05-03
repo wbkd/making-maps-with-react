@@ -24,11 +24,3 @@ Runs on [localhost:3000](http://localhost:3000/)
 ```sh
 $ npm start
 ```
-
-## Build
-
-Builds a minified version of the application in the build folder.
-
-```sh
-$ npm run build
-```
