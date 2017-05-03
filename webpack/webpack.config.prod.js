@@ -16,6 +16,11 @@ module.exports = {
     path: Path.join(__dirname, '../build'),
     filename: 'js/bundle.js'
   },
+  resolve: {
+    alias: {
+      'mapbox-gl$': Path.resolve('./node_modules/mapbox-gl/dist/mapbox-gl.js')
+    }
+  },
   plugins: [
     new Webpack.LoaderOptionsPlugin({
       minimize: true,
@@ -77,6 +82,11 @@ module.exports = {
       }
     })
   ],
+  resolve: {
+    alias: {
+      'mapbox-gl$': Path.resolve('./node_modules/mapbox-gl/dist/mapbox-gl.js')
+    }
+  },
   module: {
     rules: [
       {

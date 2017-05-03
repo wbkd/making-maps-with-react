@@ -16,7 +16,7 @@ import ReactMapGLDeckGL from './components/ReactMapGLDeckGL';
 import './styles/main.styl';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="making-maps-with-react">
     <div className="app">
       <Header />
       <Route exact path="/" component={Home} />
