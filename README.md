@@ -17,7 +17,7 @@ $ npm install
 ```
 ## Setup
 
-Rename config_sample.js to config.js and add your api keys for mapbox and googlemaps.
+Rename config_sample.json to config.json and add your api keys for mapbox and googlemaps.
 
 ## Check out the maps
 
