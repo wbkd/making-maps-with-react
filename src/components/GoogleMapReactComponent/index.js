@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import GoogleMapReact from 'google-map-react';
-import CONFIG from '../../../config_local.json';
+import CONFIG from '../../../config.json';
 import { markers, mapConfig } from '../../helper/utils';
 
 import './style.styl';

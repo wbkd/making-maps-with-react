@@ -5,7 +5,7 @@ import MapGL from 'react-map-gl';
 import DeckGL, { GeoJsonLayer, ScatterplotLayer, ScreenGridLayer } from 'deck.gl';
 import { json as requestJson } from 'd3-request';
 
-import CONFIG from '../../../config_local.json';
+import CONFIG from '../../../config.json';
 
 import { mapConfig, scatterPlotData, getColor } from '../../helper/utils';
 

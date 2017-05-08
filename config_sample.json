@@ -1,3 +1,4 @@
 {
-  "MAPBOX_ACCESS_TOKEN": "MapboxAccessToken"
+  "MAPBOX_ACCESS_TOKEN": "MapboxAccessToken",
+  "GOOGLE_MAPS_API_KEY": "GoogleMapsApiKey"
 }

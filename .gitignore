@@ -15,4 +15,4 @@ yarn.lock
 
 .vscode
 
-config_local.json
+config.json

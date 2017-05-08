@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import MapGL, { ScatterplotOverlay } from 'react-map-gl';
-import CONFIG from '../../../config_local.json';
+import CONFIG from '../../../config.json';
 import { mapConfig, locations } from '../../helper/utils';
 
 class ReactMapGL extends PureComponent {
