@@ -58,7 +58,7 @@
     "react-dev-utils": "0.5.2",
     "react-dom": "^15.4.2",
     "react-icons": "^2.2.3",
-    "react-leaflet": "^1.1.6",
+    "react-leaflet": "^1.7.1",
     "react-map-gl": "^1.8.2",
     "react-redux": "^5.0.2",
     "react-router": "4.0.0",
